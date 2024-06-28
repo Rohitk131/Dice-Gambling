@@ -27,7 +27,7 @@ export default function App() {
             } else {
                 setMessage(`You lose! The roll was ${roll}. You lost $${betAmount}`);
             }
-        }, 1000); // Simulate roll time
+        }, 500); // Simulate roll time
     };
 
     const handleBetAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,7 +55,7 @@ export default function App() {
                         Misfortune</h1>
                     <div className="flex items-center space-x-4">
                         <div className="flex flex-col space-y-2 z-10">
-                            <label className="flex flex-col text-white" style={{fontFamily: 'Roboto, sans-serif'}}>
+                            <label className="flex flex-col text-white " style={{fontFamily: 'Roboto, sans-serif'}}>
                                 Bet Amount:
                                 <input
                                     type="number"
@@ -100,10 +100,10 @@ export default function App() {
                         </div>
                     </div>
 
-                    <div className="flex flex-row items-center gap-10 mt-4">
-                        <label className="text-white" style={{fontFamily: 'Roboto, sans-serif'}}>Win
+                    <div className="flex flex-row items-center gap-10 mt-10">
+                        <label className="text-white text-2xl" style={{fontFamily: 'Roboto, sans-serif'}}>Win
                             Chance: {calculateWinChance().toFixed(2)}%</label>
-                        <label className="text-white"
+                        <label className="text-white text-2xl"
                                style={{fontFamily: 'Roboto, sans-serif'}}>Threshold: {threshold}</label>
                     </div>
 
@@ -135,7 +135,7 @@ export default function App() {
                             initial={{opacity: 0, scale: 0}}
                             animate={{opacity: 1, scale: 1}}
                             transition={{duration: 0.5}}
-                            className="mt-4 text-white"
+                            className="mt-4 text-white text-2xl"
                             style={{fontFamily: 'Roboto, sans-serif'}}
                         >
                             {message}
